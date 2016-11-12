@@ -21,14 +21,16 @@ import static org.junit.Assert.assertNull;
 
 public class SahiTestCase extends FunctionalTestCase
 {
-    protected String getConfigResources()
-    {
+    protected String getConfigResources()    {
+System.out.toString("hellow Ankit");
+    	
         //TODO You'll need to edit this file to make the test applicable to your module
-        return "sahi-functional-test-config.xml";
+        return "C:\nanu\pcfdev-v0.21.0+PCF1.8.2-windows\mule_maven\Backup\Sahi\src\test\resources\sahi-functional-test-config.xml";
     }
 
     @Test
     public void sahi() throws Exception
+    
     {
         MuleClient client = muleContext.getClient();
         client.dispatch("vm://in", "some data", null);
